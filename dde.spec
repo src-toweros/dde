@@ -148,5 +148,5 @@ install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
-* Tue Sep 8 2020 chenbo pan <panchenbo@uniontech.com> - 2020.03.30-1
+* Tue Sep 8 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-1
 - project init.
