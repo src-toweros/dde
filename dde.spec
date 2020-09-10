@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        1 
+Release:        2 
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -148,5 +148,8 @@ install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Thu Sep 10 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-2
+- fix src tar
+
 * Tue Sep 8 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-1
 - project init.
