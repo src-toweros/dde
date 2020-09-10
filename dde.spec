@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        2 
+Release:        3
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -62,7 +62,6 @@ Requires:	deepin-clone
 Requires:	deepin-dbus-generator
 Requires:	deepin-desktop-base
 Requires:	deepin-gettext-tools
-Requires:	deepin-gir-generator
 Requires:	gnu-free-fonts-common
 Requires:	sil-padauk-fonts
 Requires:	urw-base35-c059-fonts
@@ -148,6 +147,9 @@ install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Thu Sep 10 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-3
+- remove requires deepin-gir-generator 
+
 * Thu Sep 10 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-2
 - fix src tar
 
