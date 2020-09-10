@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        3
+Release:        4
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -10,6 +10,7 @@ Source0:        https://uos-packages.deepin.com/uos/pool/main/d/dde/%{name}_%{ve
 Source1:        dde.conf
 Source2:        dde
 
+BuildRequires:	shadow
 Requires:  	lightdm
 Requires:	plymouth
 Requires:  	lightdm-gtk-greeter
@@ -132,13 +133,28 @@ Deepin New Desktop Environment - Next.
 
 %build
 
-
 %install
 mkdir -p %{buildroot}/etc/{rsyslog.d,logrotate.d}
 install -Dm644 %{SOURCE1} %{buildroot}/etc/rsyslog.d/dde.conf
 install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
 
+%pre
+if ! /usr/bin/id -g ddeuser &>/dev/null; then
+  /usr/sbin/groupadd -r ddeuser
+fi
+if ! /usr/bin/id ddeuser &>/dev/null; then
+  /usr/sbin/useradd -g ddeuser -G wheel -m ddeuser > /dev/null 2>&1
+fi
+echo "ddeuser
+ddeuser" | passwd ddeuser > /dev/null 2>&1
 
+%post
+if ! /usr/bin/id -g ddeuser &>/dev/null; then
+  /usr/sbin/groupdel -f ddeuser
+fi
+if ! /usr/bin/id ddeuser &>/dev/null; then
+  /usr/sbin/userdel -fr ddeuser > /dev/null 2>&1
+fi
 
 %files
 %doc debian/copyright
@@ -147,6 +163,9 @@ install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Thu Sep 10 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-4
+- add ddeuser
+
 * Thu Sep 10 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-3
 - remove requires deepin-gir-generator 
 
