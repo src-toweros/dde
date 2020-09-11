@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        5
+Release:        6
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -140,7 +140,7 @@ install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
 
 %pre
 getent group ddeuser >/dev/null || groupadd -r ddeuser
-getent passwd ddeuser >/dev/null || useradd -g ddeuser -G wheel -m ddeuser -c "User of dde"> /dev/null 
+getent passwd ddeuser >/dev/null || useradd -g ddeuser -G wheel -m ddeuser > /dev/null 
 echo "ddeuser
 ddeuser" | passwd ddeuser > /dev/null 2>&1
 
@@ -151,6 +151,9 @@ ddeuser" | passwd ddeuser > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Fri Sep 11 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-6
+- fix ddeuser error
+
 * Thu Sep 10 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-5
 - fix add ddeuser
 
