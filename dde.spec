@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        6
+Release:        7
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -16,9 +16,6 @@ Requires:	plymouth
 Requires:  	lightdm-gtk-greeter
 Requires:  	mesa-dri-drivers
 Requires:  	xorg-x11-server
-Requires:	onboard
-Requires:	glibc-all-langpacks
-Requires:	langpacks-zh_CN
 Requires:  	dde-api
 Requires:  	dde-kwin
 Requires:  	dde-dock
@@ -124,6 +121,9 @@ Recommends:	firefox
 Recommends:	gparted
 Recommends:	im-chooser
 Recommends:	ibus-libpinyin
+Recommends:     onboard
+Recommends:     glibc-all-langpacks
+Recommends:     langpacks-zh_CN
 
 %description
 Deepin New Desktop Environment - Next.
@@ -151,6 +151,9 @@ ddeuser" | passwd ddeuser > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Fri Oct 16 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-7
+- modify some requires 
+
 * Fri Sep 11 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-6
 - fix ddeuser error
 
