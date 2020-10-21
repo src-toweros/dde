@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        7
+Release:        8
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -94,9 +94,11 @@ Requires:	navilu-fonts
 Requires:	dejavu-fonts
 Requires:	khmeros-fonts
 Requires:	lohit-telugu-fonts
+Requires:   	deepin-editor
+Requires:   	deepin-image-viewer
+Requires:   	deepin-font-manager
+Requires:   	deepin-reader
 
-Recommends:  	deepin-editor
-Recommends:  	deepin-image-viewer
 Recommends:  	deepin-shortcut-viewer
 Recommends:  	deepin-calendar
 Recommends:  	deepin-sound-theme
@@ -107,10 +109,8 @@ Recommends:  	deepin-ab-recovery
 Recommends:  	deepin-compressor
 Recommends:  	deepin-devicemanager
 Recommends:  	deepin-elf-verify
-Recommends:  	deepin-font-manager
 Recommends:  	deepin-graphics-driver-manager
 Recommends:  	deepin-log-viewer
-Recommends:  	deepin-reader
 Recommends:  	libpam-deepin-security
 Recommends:  	deepin-manual 
 Recommends:	dde-introduction
@@ -151,6 +151,9 @@ ddeuser" | passwd ddeuser > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Wed Oct 21 2020 weidong <weidong@uniontech.com> - 2020.06.11-8
+- modify some requires 
+
 * Fri Oct 16 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-7
 - modify some requires 
 
