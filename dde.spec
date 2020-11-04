@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        8
+Release:        9
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -139,10 +139,10 @@ install -Dm644 %{SOURCE1} %{buildroot}/etc/rsyslog.d/dde.conf
 install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
 
 %pre
-getent group ddeuser >/dev/null || groupadd -r ddeuser
-getent passwd ddeuser >/dev/null || useradd -g ddeuser -G wheel -m ddeuser > /dev/null 
-echo "ddeuser
-ddeuser" | passwd ddeuser > /dev/null 2>&1
+getent group openeuler >/dev/null || groupadd -r openeuler
+getent passwd openeuler >/dev/null || useradd -g openeuler -G wheel -m openeuler > /dev/null 
+echo "openeuler
+openeuler" | passwd openeuler > /dev/null 2>&1
 
 %files
 %doc debian/copyright
@@ -151,6 +151,9 @@ ddeuser" | passwd ddeuser > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Wed Nov 04 2020 weidong <weidong@uniontech.com> - 2020.06.11-9
+- Change the default user to openeuler
+
 * Wed Oct 21 2020 weidong <weidong@uniontech.com> - 2020.06.11-8
 - modify some requires 
 
