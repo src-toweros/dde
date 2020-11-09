@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        9
+Release:        10
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -93,12 +93,12 @@ Requires:	urw-base35-d050000l-fonts
 Requires:	navilu-fonts
 Requires:	dejavu-fonts
 Requires:	khmeros-fonts
-Requires:	lohit-telugu-fonts
 Requires:   	deepin-editor
 Requires:   	deepin-image-viewer
 Requires:   	deepin-font-manager
 Requires:   	deepin-reader
 
+Recommends:	lohit-telugu-fonts
 Recommends:  	deepin-shortcut-viewer
 Recommends:  	deepin-calendar
 Recommends:  	deepin-sound-theme
@@ -151,6 +151,9 @@ openeuler" | passwd openeuler > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Mon Nov 09 2020 weidong <weidong@uniontech.com> - 2020.06.11-10
+- modify some requires 
+
 * Wed Nov 04 2020 weidong <weidong@uniontech.com> - 2020.06.11-9
 - Change the default user to openeuler
 
