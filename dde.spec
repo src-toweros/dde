@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.06.11
-Release:        10
+Release:        11
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -60,45 +60,45 @@ Requires:	deepin-clone
 Requires:	deepin-dbus-generator
 Requires:	deepin-desktop-base
 Requires:	deepin-gettext-tools
-Requires:	gnu-free-fonts-common
-Requires:	sil-padauk-fonts
-Requires:	urw-base35-c059-fonts
-Requires:	urw-base35-z003-fonts
-Requires:	google-noto-cjk-fonts
-Requires:	paratype-pt-sans-fonts
-Requires:	urw-base35-nimbus-sans-fonts
-Requires:	fonts-filesystem
-Requires:	google-noto-emoji-fonts
-Requires:	google-noto-serif-cjk-ttc-fonts
-Requires:	gnu-free-serif-fonts
-Requires:	sil-abyssinica-fonts
-Requires:	jomolhari-fonts
-Requires:	urw-base35-gothic-fonts
-Requires:	urw-base35-p052-fonts
-Requires:	google-noto-sans-cjk-ttc-fonts
-Requires:	gnu-free-sans-fonts
-Requires:	sil-nuosu-fonts
-Requires:	julietaula-montserrat-fonts
-Requires:	urw-base35-fonts-common
-Requires:	urw-base35-bookman-fonts
-Requires:	urw-base35-nimbus-mono-ps-fonts
-Requires:	urw-base35-standard-symbols-ps-fonts
-Requires:	google-droid-sans-fonts
-Requires:	gnu-free-mono-fonts
-Requires:	paktype-naskh-basic-fonts
-Requires:	urw-base35-nimbus-roman-fonts
-Requires:	abattis-cantarell-fonts
-Requires:	stix-fonts
-Requires:	urw-base35-d050000l-fonts
-Requires:	navilu-fonts
-Requires:	dejavu-fonts
-Requires:	khmeros-fonts
 Requires:   	deepin-editor
-Requires:   	deepin-image-viewer
 Requires:   	deepin-font-manager
 Requires:   	deepin-reader
 
-Recommends:	lohit-telugu-fonts
+Recommends:     gnu-free-fonts-common
+Recommends:     sil-padauk-fonts
+Recommends:     urw-base35-c059-fonts
+Recommends:     urw-base35-z003-fonts
+Recommends:     google-noto-cjk-fonts
+Recommends:     paratype-pt-sans-fonts
+Recommends:     urw-base35-nimbus-sans-fonts
+Recommends:     fonts-filesystem
+Recommends:     google-noto-emoji-fonts
+Recommends:     google-noto-serif-cjk-ttc-fonts
+Recommends:     gnu-free-serif-fonts
+Recommends:     sil-abyssinica-fonts
+Recommends:     jomolhari-fonts
+Recommends:     urw-base35-gothic-fonts
+Recommends:     urw-base35-p052-fonts
+Recommends:     google-noto-sans-cjk-ttc-fonts
+Recommends:     gnu-free-sans-fonts
+Recommends:     sil-nuosu-fonts
+Recommends:     julietaula-montserrat-fonts
+Recommends:     urw-base35-fonts-common
+Recommends:     urw-base35-bookman-fonts
+Recommends:     urw-base35-nimbus-mono-ps-fonts
+Recommends:     urw-base35-standard-symbols-ps-fonts
+Recommends:     google-droid-sans-fonts
+Recommends:     gnu-free-mono-fonts
+Recommends:     paktype-naskh-basic-fonts
+Recommends:     urw-base35-nimbus-roman-fonts
+Recommends:     abattis-cantarell-fonts
+Recommends:     stix-fonts
+Recommends:     urw-base35-d050000l-fonts
+Recommends:     navilu-fonts
+Recommends:     dejavu-fonts
+Recommends:     khmeros-fonts
+Recommends:     lohit-telugu-fonts
+Recommends:     deepin-image-viewer
 Recommends:  	deepin-shortcut-viewer
 Recommends:  	deepin-calendar
 Recommends:  	deepin-sound-theme
@@ -151,6 +151,9 @@ openeuler" | passwd openeuler > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Mon Nov 09 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-11
+- modify fonts rpm requires to recommends
+
 * Mon Nov 09 2020 weidong <weidong@uniontech.com> - 2020.06.11-10
 - modify some requires 
 
