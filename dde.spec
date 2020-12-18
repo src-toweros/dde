@@ -1,8 +1,8 @@
 %global debug_package   %{nil}
 
 Name:           dde
-Version:        2020.06.11
-Release:        11
+Version:        2020.03.30
+Release:        12
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -151,6 +151,9 @@ openeuler" | passwd openeuler > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Fri Dec 18 2020 weidong <weidong@uniontech.com> - 2020.03.30-12
+- Fix version
+
 * Mon Nov 09 2020 chenbo pan <panchenbo@uniontech.com> - 2020.06.11-11
 - modify fonts rpm requires to recommends
 
