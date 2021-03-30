@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.03.30
-Release:        12
+Release:        13
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -119,11 +119,10 @@ Recommends:	deepin-screenshot
 Recommends:	deepin-picker
 Recommends:	firefox
 Recommends:	gparted
-Recommends:	im-chooser
-Recommends:	ibus-libpinyin
 Recommends:     onboard
 Recommends:     glibc-all-langpacks
 Recommends:     langpacks-zh_CN
+Recommends:     fcitx fcitx-qt5 fcitx-pinyin fcitx-sunpinyin fcitx-configtool fcitx-table-chinese
 
 %description
 Deepin New Desktop Environment - Next.
@@ -151,6 +150,9 @@ openeuler" | passwd openeuler > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Tue Mar 30 2021 weidong <weidong@uniontech.com> - 2020.03.30-13
+- Set the default input method to fcitx
+
 * Fri Dec 18 2020 weidong <weidong@uniontech.com> - 2020.03.30-12
 - Fix version
 
