@@ -1,14 +1,13 @@
 %global debug_package   %{nil}
 
 Name:           dde
-Version:        2020.03.30
-Release:        13
+Version:        2020.11.03
+Release:        1
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
-Source0:        https://uos-packages.deepin.com/uos/pool/main/d/dde/%{name}_%{version}.orig.tar.xz
-Source1:        dde.conf
-Source2:        dde
+Source0:        dde.conf
+Source1:        dde
 
 BuildRequires:	shadow
 Requires:  	lightdm
@@ -128,14 +127,13 @@ Recommends:     fcitx fcitx-qt5 fcitx-pinyin fcitx-sunpinyin fcitx-configtool fc
 Deepin New Desktop Environment - Next.
 
 %prep
-%setup -q
 
 %build
 
 %install
 mkdir -p %{buildroot}/etc/{rsyslog.d,logrotate.d}
-install -Dm644 %{SOURCE1} %{buildroot}/etc/rsyslog.d/dde.conf
-install -Dm644 %{SOURCE2} %{buildroot}/etc/logrotate.d/dde
+install -Dm644 %{SOURCE0} %{buildroot}/etc/rsyslog.d/dde.conf
+install -Dm644 %{SOURCE1} %{buildroot}/etc/logrotate.d/dde
 
 %pre
 getent group openeuler >/dev/null || groupadd -r openeuler
@@ -144,12 +142,13 @@ echo "openeuler
 openeuler" | passwd openeuler > /dev/null 2>&1
 
 %files
-%doc debian/copyright
-%doc debian/changelog
 %{_sysconfdir}/rsyslog.d/dde.conf
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Wed Jul 07 2021 weidong <weidong@uniontech.com> - 2020.11.03-11
+- Update to 2020.11.03
+
 * Tue Mar 30 2021 weidong <weidong@uniontech.com> - 2020.03.30-13
 - Set the default input method to fcitx
 
