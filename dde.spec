@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.11.03
-Release:        1
+Release:        2
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -12,7 +12,6 @@ Source1:        dde
 BuildRequires:	shadow
 Requires:  	lightdm
 Requires:	plymouth
-Requires:  	lightdm-gtk-greeter
 Requires:  	mesa-dri-drivers
 Requires:  	xorg-x11-server
 Requires:  	dde-api
@@ -146,7 +145,10 @@ openeuler" | passwd openeuler > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
-* Wed Jul 07 2021 weidong <weidong@uniontech.com> - 2020.11.03-11
+* Tue Aug 03 2021 weidong <weidong@uniontech.com> - 2020.11.03-2
+- Delete requires lightdm-greeter
+
+* Wed Jul 07 2021 weidong <weidong@uniontech.com> - 2020.11.03-1
 - Update to 2020.11.03
 
 * Tue Mar 30 2021 weidong <weidong@uniontech.com> - 2020.03.30-13
