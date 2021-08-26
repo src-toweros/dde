@@ -2,7 +2,7 @@
 
 Name:           dde
 Version:        2020.11.03
-Release:        2
+Release:        3
 Summary:        Deepin New Desktop Environment - Next
 License:        GPLv3
 URL:            https://uos-packages.deepin.com/uos/pool/main/d/dde/
@@ -61,6 +61,7 @@ Requires:	deepin-gettext-tools
 Requires:   	deepin-editor
 Requires:   	deepin-font-manager
 Requires:   	deepin-reader
+Requires:   	gnome-keyring
 
 Recommends:     gnu-free-fonts-common
 Recommends:     sil-padauk-fonts
@@ -145,6 +146,9 @@ openeuler" | passwd openeuler > /dev/null 2>&1
 %{_sysconfdir}/logrotate.d/dde
 
 %changelog
+* Tue Aug 26 2021 heyitao <heyitao@uniontech.com> - 2020.11.03-3
+- add install require
+
 * Tue Aug 03 2021 weidong <weidong@uniontech.com> - 2020.11.03-2
 - Delete requires lightdm-greeter
 
